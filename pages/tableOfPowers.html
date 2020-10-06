@@ -46,7 +46,12 @@
                     "Read from INPUT into numRows\n" +
                     "PRINT \'Enter the number of powers to print: \'\n" +
                     "Read from INPUT into numPowers\n" +
-                    "for( int i =  $$toggle::0::1::numRows$$; i $$toggle::<::>::!=::==::<=::>=$$ numRows; i++;)\n";
+                    "for(int i =  $$toggle::0::1::numRows$$; i $$toggle::<::>::!=::==::<=::>=$$ numRows; i++;)\n" +
+                    "int numToPrint = i\n" +
+                    "PRINT (with right allignment 2) numToPrint\n" +
+                    "for (int j = $$toggle:: 0:: 1:: numPowers$$; j $$toggle::<::>::!=::==::<=::>= $$ numPowers; j++;) \n" + 
+                    "PRINT (with right allignment 8) numToPrint *= i\n" +
+                    "PRINT new line\n";
                 var parson;
 
                 $(document).ready(function () {
@@ -67,7 +72,10 @@
                             "Read from INPUT into numRows\n" +
                             "PRINT \'Enter the number of powers to print: \'\n" +
                             "Read from INPUT into numPowers\n" +
-                            "for( int i =  $$toggle$$; i $$toggle::<::>::!=::==::<=::>=$$ numRows; i++;)\n"
+                            "for(int i =  $$toggle$$; i $$toggle::<::>::!=::==::<=::>=$$ numRows; i++;)\n" +
+                            "for(int j =  $$toggle$$; j $$toggle::<::>::!=::==::<=::>=$$ numPowers; j++;)\n" +
+                            "PRINT (with right allignment 8) numToPrint *= i\n" +
+                            "PRINT new line\n"
 
                     });
                     parson.init(initial);
