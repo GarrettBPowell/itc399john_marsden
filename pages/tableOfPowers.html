@@ -32,7 +32,6 @@
             <div style="clear:both;"></div>
             <div id="unittest"></div>
             <script src="../lib/jquery.min.js"></script>
-            <script src="../lib/jquery.min.js"></script>
             <script src="../lib/jquery-ui.min.js"></script>
             <script src="../lib/jquery.ui.touch-punch.min.js"></script>
             <script src="../lib/underscore-min.js"></script>
@@ -47,6 +46,17 @@
                     '  min := b\n' +
                     'ENDIF';
                 var parson;
+                var sure;
+
+                $(document).ready(function () {
+                    sure = new ParsonsWidget({
+                        'sortableId': 'sortable',
+                        'trashId': 'sortableTrash',
+
+                    });
+                    sure.init(initial);
+                    sure.shuffleLines();
+                });
 
                 $(document).ready(function () {
                     parson = new ParsonsWidget({

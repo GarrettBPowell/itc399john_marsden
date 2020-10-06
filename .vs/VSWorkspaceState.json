@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\pages"
+    "\\lib",
+    "\\lib\\ui-extension",
+    "\\pages",
+    "\\ui-extension"
   ],
-  "SelectedNode": "\\pages\\ifExample.html",
+  "SelectedNode": "\\lib\\jquery.min.js",
   "PreviewInSolutionExplorer": false
 }
