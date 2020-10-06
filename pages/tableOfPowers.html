@@ -46,17 +46,9 @@
                     '  min := b\n' +
                     'ENDIF';
                 var parson;
-                var sure;
+                var sure = 'this is a thing that now works';
 
-                $(document).ready(function () {
-                    sure = new ParsonsWidget({
-                        'sortableId': 'sortable',
-                        'trashId': 'sortableTrash',
-
-                    });
-                    sure.init(initial);
-                    sure.shuffleLines();
-                });
+            
 
                 $(document).ready(function () {
                     parson = new ParsonsWidget({
