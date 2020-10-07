@@ -3,9 +3,11 @@
     "",
     "\\lib",
     "\\lib\\ui-extension",
+    "\\moreEvenOdd",
     "\\pages",
+    "\\tests",
     "\\ui-extension"
   ],
-  "SelectedNode": "\\lib\\jquery.min.js",
+  "SelectedNode": "\\pages\\ifExample.html",
   "PreviewInSolutionExplorer": false
 }

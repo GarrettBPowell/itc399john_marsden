@@ -40,11 +40,24 @@
             <script src="../lib/skulpt.js"></script>
             <script src="../lib/skulpt-stdlib.js"></script>
             <script>
-          var initial = 'IF $$toggle::a::b$$ $$toggle::<::>::<>$$ b THEN\n' +
-                        '  min = a\n' +
-                        'ELSE\n' +
-                        '  min = b\n' +
-                        'ENDIF';
+                var initial = 
+                    "PRINT \'Enter integer values into the array, or -1 to stop:\'\n" +
+                    "while(num $$toggle::<::>::!=::==::<=::>=$$-1)\n" +
+                    "Read from INPUT into num \n" +
+                    "Put data in num into array at count\n" +
+                    "inciment count\n" + 
+                    "PRINT \'Distinct values in the array:\'\n" +
+                    "Reset count to 0\n" + 
+                    "while(array[count] $$toggle::<::>::!=::==::<=::>=$$-1)\n" +
+                    "while(array[count] $$toggle::<::>::!=::==::<=::>=$$-1 and $$toggle:: count:: loop:: -1$$ $$toggle::<::>::!=::==::<=::>= $$ $$toggle:: count:: loop:: -1$$) \n" +
+                    "if array[ $$toggle:: count:: loop $$] $$toggle::<::>::!=::==::<=::>= $$ array[ $$toggle:: count:: loop$$]\n" + 
+                    "boolean unique = false\n" +
+                    "incriment loop\n" +
+                    "if unique = true\n " +
+                    "PRINT array[count]\n" +
+                    "Reset loop to 0\n" +
+                    "Reset unique to true\n" +
+                    "incriment count\n";
           var parson;
 
           $(document).ready(function(){
@@ -56,11 +69,24 @@
                       {initcode: "min = None\na = 7\nb = 4\n", code: "", message: "Testing with a = 7 ja b = 4",
                         variables: {min: 4}}],
                   'grader': ParsonsWidget._graders.LanguageTranslationGrader,
-                  'executable_code': "if $$toggle$$ $$toggle::<::>::!=$$ b:\n" +
-                        "min = a\n" +
-                        "else:\n" +
-                        "min = b\n  pass",
-                  'programmingLang': "pseudo"
+                  'executable_code':
+                      "PRINT \'Enter integer values into the array, or -1 to stop:\'\n" +
+                      "while(num $$toggle::<::>::!=::==::<=::>=$$-1)\n" +
+                      "Read from INPUT into num \n" +
+                      "Put data in num into array at count\n" +
+                      "inciment count\n" +
+                      "PRINT \'Distinct values in the array:\'\n" +
+                      "Reset count to 0\n" +
+                      "while(array[count] $$toggle::<::>::!=::==::<=::>=$$-1)\n" +
+                      "while(array[count] $$toggle::<::>::!=::==::<=::>=$$-1 and $$toggle:: count:: loop:: -1$$ $$toggle::<::>::!=::==::<=::>= $$ $$toggle$$) \n" +
+                      "if array[ $$toggle$$] $$toggle::<::>::!=::==::<=::>= $$ array[ $$toggle$$]\n" +
+                      "boolean unique = false\n" +
+                      "incriment loop\n" +
+                      "if unique = true\n " +
+                      "PRINT array[count]\n" +
+                      "Reset loop to 0\n" +
+                      "Reset unique to true\n" +
+                      "incriment count\n"
               });
               parson.init(initial);
               parson.shuffleLines();
