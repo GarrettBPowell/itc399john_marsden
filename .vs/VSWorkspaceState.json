@@ -1,13 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\lib",
-    "\\lib\\ui-extension",
-    "\\moreEvenOdd",
     "\\pages",
     "\\tests",
     "\\ui-extension"
   ],
-  "SelectedNode": "\\pages\\ifExample.html",
+  "SelectedNode": "\\index.html",
   "PreviewInSolutionExplorer": false
 }
