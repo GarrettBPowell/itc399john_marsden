@@ -39,22 +39,16 @@
             <script>
                 var initial = 
                     "PRINT \'Enter integer values into the array, or -1 to stop:\'\n" +
-                    "while(num $$toggle::<::>::!=::==::<=::>=$$-1)\n" +
-                    "Read from INPUT into num \n" +
-                    "Put data in num into array at count\n" +
-                    "inciment count\n" + 
+                    "while INPUT $$toggle::<::>::!=::==::<=::>=$$-1)\n" +
+                    "Read from INPUT and store in INPUT array \n" +
+                  
+                    "For the length of the INPUT array\n" +
+                    "Check if each element in array is in distinct element array\n" + 
+                    "If element is not in distinct element array, add it\n" +
                     "PRINT \'Distinct values in the array:\'\n" +
-                    "Reset count to 0\n" + 
-                    "while(array[count] $$toggle::<::>::!=::==::<=::>=$$-1)\n" +
-                    "while(array[count] $$toggle::<::>::!=::==::<=::>=$$-1 and $$toggle:: count:: loop:: -1$$ $$toggle::<::>::!=::==::<=::>= $$ $$toggle:: count:: loop:: -1$$) \n" +
-                    "if array[ $$toggle:: count:: loop $$] $$toggle::<::>::!=::==::<=::>= $$ array[ $$toggle:: count:: loop$$]\n" + 
-                    "boolean unique = false\n" +
-                    "incriment loop\n" +
-                    "if unique = true\n " +
-                    "PRINT array[count]\n" +
-                    "Reset loop to 0\n" +
-                    "Reset unique to true\n" +
-                    "incriment count\n";
+                    "Print all elements in the distinct element array\n"
+
+                    
           var parson;
 
           $(document).ready(function(){
@@ -68,22 +62,16 @@
                   'grader': ParsonsWidget._graders.LanguageTranslationGrader,
                   'executable_code':
                       "PRINT \'Enter integer values into the array, or -1 to stop:\'\n" +
-                      "while(num $$toggle::<::>::!=::==::<=::>=$$-1)\n" +
-                      "Read from INPUT into num \n" +
-                      "Put data in num into array at count\n" +
-                      "inciment count\n" +
+                      "while INPUT $$toggle::<::>::!=::==::<=::>=$$-1)\n" +
+                      "Read from INPUT and store in INPUT array \n" +
+
+                      "For the length of the INPUT array\n" +
+                      "Check if each element in array is in distinct element array\n" +
+                      "If element is not in distinct element array, add it\n" +
                       "PRINT \'Distinct values in the array:\'\n" +
-                      "Reset count to 0\n" +
-                      "while(array[count] $$toggle::<::>::!=::==::<=::>=$$-1)\n" +
-                      "while(array[count] $$toggle::<::>::!=::==::<=::>=$$-1 and $$toggle:: count:: loop:: -1$$ $$toggle::<::>::!=::==::<=::>= $$ $$toggle$$) \n" +
-                      "if array[ $$toggle$$] $$toggle::<::>::!=::==::<=::>= $$ array[ $$toggle$$]\n" +
-                      "boolean unique = false\n" +
-                      "incriment loop\n" +
-                      "if unique = true\n " +
-                      "PRINT array[count]\n" +
-                      "Reset loop to 0\n" +
-                      "Reset unique to true\n" +
-                      "incriment count\n"
+                      "Print all elements in the distinct element array\n"
+
+                      
               });
               parson.init(initial);
               parson.shuffleLines();
