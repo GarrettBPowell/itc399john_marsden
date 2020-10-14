@@ -29,18 +29,23 @@
           <script src="../lib/skulpt.js"></script>
           <script src="../lib/skulpt-stdlib.js"></script>
           <script>
-              var initial = "while INPUT $$toggle::<::>::!=::==::<=::>=$$-1)";
-          var parson;
+              var initial = "while INPUT $$toggle::<::>::!=::==::<=::>=$$-1";
+              var parson;
 
-          $(document).ready(function(){
-              parson = new ParsonsWidget({
-                  'sortableId': 'sortable',
-                  'trashId': 'sortableTrash',
-                  'max_wrong_lines': 1,
-                  'grader': ParsonsWidget._graders.LanguageTranslationGrader,
-                  'executable_code': 
-                      "while INPUT $$toggle::<::>::!=::==::<=::>=$$-1)"
-              });
+              $(document).ready(function(){
+                  parson = new ParsonsWidget({
+                      'sortableId': 'sortable',
+                      'trashId': 'sortableTrash',
+                      'max_wrong_lines': 1,
+                      'vartests': [{ initcode: "min = None\na = 0\nb = 2", code: "", message: "Testing with a = 0 ja b = 2", variables: { min: 0 } },
+                      {
+                          initcode: "min = None\na = 7\nb = 4\n", code: "", message: "Testing with a = 7 ja b = 4",
+                          variables: { min: 4 }
+                      }],
+                      'grader': ParsonsWidget._graders.LanguageTranslationGrader,
+                      'executable_code': 
+                          "while INPUT $$toggle::<::>::!=::==::<=::>=$$-1"
+                  });
               parson.init(initial);
               parson.shuffleLines();
           });
