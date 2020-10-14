@@ -43,12 +43,12 @@
                 var initial =
                     "PRINT \'The program prints a table of exponential powers.\'\n" +
                     "PRINT \'Enter the number of rows to print: \'\n" +
-                    "Read from INPUT into numRows\n" +
+                    "Read from INPUT and STORE in numRows\n" +
                     "PRINT \'Enter the number of powers to print: \'\n" +
-                    "Read from INPUT into numPowers\n" +
-                    "For numRows\n" +
-                    "For numPowers\n" +
-                    "PRINT  the base number 1 to numPowers power\n";
+                    "Read from INPUT and STORE in numPowers\n" +
+                    "FOR numRows\n" +
+                    "FOR numPowers\n" +
+                    "PRINT the base number 1 to numPowers power\n";
                 var parson;
 
                 $(document).ready(function () {
@@ -66,12 +66,12 @@
                         'executable_code': "inputValue = 0\n" +
                             "PRINT \'The program prints a table of exponential powers.\'\n" +
                             "PRINT \'Enter the number of rows to print: \'\n" +
-                            "Read from INPUT into numRows\n" +
+                            "Read from INPUT and STORE in numRows\n" +
                             "PRINT \'Enter the number of powers to print: \'\n" +
-                            "Read from INPUT into numPowers\n" +
-                            "For numRows\n" +
-                            "For numPowers\n" +
-                            "PRINT  the base number 1 to numPowers power\n"
+                            "Read from INPUT and STORE in numPowers\n" +
+                            "FOR numRows\n" +
+                            "FOR numPowers\n" +
+                            "PRINT the base number 1 to numPowers power\n"
                       
                     });
                     parson.init(initial);
