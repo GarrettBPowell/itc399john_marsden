@@ -11,15 +11,10 @@
     <body>
       <div id="container">
         <div id="header">
-          <h2>Indentation and Input</h2>
+          <h2>Toggle</h2>
         </div>
         <div id="body">
-          <p>You can change the indentation of blocks by dragging them
-          over to the right or left inside of the area in which you
-          construct your program. Use the READ FROM INPUT INTO block to see
-          how you can change the tabbing. The READ FROM INPUT INTO block
-          reads input from the console into the variable stated in the
-          block.</p>
+          <p>You can toggle the red ?? boxes and change what they contain.</p>
           <div id="sortableTrash" class="sortable-code"></div>
           <div id="sortable" class="sortable-code">
           </div>
@@ -34,7 +29,7 @@
           <script src="../lib/skulpt.js"></script>
           <script src="../lib/skulpt-stdlib.js"></script>
           <script>
-          var initial = "READ FROM INPUT INTO input";
+              var initial = "while INPUT $$toggle::<::>::!=::==::<=::>=$$-1)";
           var parson;
 
           $(document).ready(function(){
@@ -44,7 +39,7 @@
                   'max_wrong_lines': 1,
                   'grader': ParsonsWidget._graders.LanguageTranslationGrader,
                   'executable_code': 
-                      "READ FROM INPUT INTO input"
+                      "while INPUT $$toggle::<::>::!=::==::<=::>=$$-1)"
               });
               parson.init(initial);
               parson.shuffleLines();
@@ -53,7 +48,7 @@
         </div>
         <div id="footer">
           <a href="../index.html" class="button left">Previous</a>
-          <a href="./toggleExample.html" class="button right">Next</a>
+          <a href="./distinctElements.html" class="button right">Next</a>
         </div>
       </div>
     </body>
