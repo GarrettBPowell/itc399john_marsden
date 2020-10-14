@@ -24,35 +24,40 @@
         <script src="../lib/lis.js"></script>
         <script src="../parsons.js"></script>
         <script>
-        var initial = "print 'Hello'\n" +
-                      "print 'Parsons\n" +
-                      "print 'problems!";
+            var initial = "print 'Hello'\n" +
+                "print 'Parsons\n" +
+                "print 'problems!";
 
-        function displayErrors(fb) {
-            if(fb.errors.length > 0) {
-                alert(fb.errors[0]);
+            function displayErrors(fb) {
+                if (fb.errors.length > 0) {
+                    alert(fb.errors[0]);
+                }
             }
-        } 
 
-        $(document).ready(function(){
-            var parson = new ParsonsWidget({
-                sortableId: 'sortable',
-                trashId: 'sortableTrash',
-                max_wrong_lines: 1,
-                feedback_cb : displayErrors,
-                can_indent: false
-            });
-            parson.init(initial);
-            parson.shuffleLines();
-            $("#newInstanceLink").click(function(event){
-                event.preventDefault();
+            $(document).ready(function () {
+                var parson = new ParsonsWidget({
+                    sortableId: 'sortable',
+                    trashId: 'sortableTrash',
+                    max_wrong_lines: 1,
+                    feedback_cb: displayErrors,
+                    can_indent: false
+                });
+                parson.init(initial);
                 parson.shuffleLines();
+                $("#newInstanceLink").click(function (event) {
+                    event.preventDefault();
+                    parson.shuffleLines();
+                });
+                $("#feedbackLink").click(function (event) {
+                    event.preventDefault();
+                    parson.getFeedback();
+                });
             });
-            $("#feedbackLink").click(function(event){
-                event.preventDefault();
-                parson.getFeedback();
-            });
-        });
         </script>
+        <div id="footer">
+            <a href="../index.html" class="button left">Previous</a>
+            <a href="./pseudocode-example.html" class="button right">Next</a>
+        </div>
     </body>
+
 </html>

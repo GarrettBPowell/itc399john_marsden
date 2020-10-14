@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
     <head>
         <title>Simple js-parsons example assignment</title>
@@ -9,9 +9,11 @@
     </head>
     <body>
         <h2>Simple js-parsons pseudocode example assignment</h2>
-        <p>Construct a function by drag&amp;dropping and reordering lines from the
+        <p>
+            Construct a function by drag&amp;dropping and reordering lines from the
             left to the right.
-            The constructed function should set the value of variable min to be the smaller of variables a and b.</p>
+            The constructed function should set the value of variable min to be the smaller of variables a and b.
+        </p>
         <div id="sortableTrash" class="sortable-code"></div>
         <div id="sortable" class="sortable-code">
         </div>
@@ -30,40 +32,46 @@
         <script src="../lib/skulpt.js"></script>
         <script src="../lib/skulpt-stdlib.js"></script>
         <script>
-        var initial = 'IF $$toggle::a::b$$ $$toggle::<::>::<>$$ b THEN\n' +
-                      '  min := a\n' +
-                      'ELSE\n' +
-                      '  min := b\n' +
-                      'ENDIF';
-        var parson;
+            var initial = 'IF $$toggle::a::b$$ $$toggle::<::>::<>$$ b THEN\n' +
+                '  min := a\n' +
+                'ELSE\n' +
+                '  min := b\n' +
+                'ENDIF';
+            var parson;
 
-        $(document).ready(function(){
-            parson = new ParsonsWidget({
-                'sortableId': 'sortable',
-                'trashId': 'sortableTrash',
-                'max_wrong_lines': 1,
-                'vartests': [{initcode: "min = None\na = 0\nb = 2", code: "", message: "Testing with a = 0 ja b = 2", variables: {min: 0}},
-                    {initcode: "min = None\na = 7\nb = 4\n", code: "", message: "Testing with a = 7 ja b = 4",
-                      variables: {min: 4}}],
-                'grader': ParsonsWidget._graders.LanguageTranslationGrader,
-                'executable_code': "if $$toggle$$ $$toggle::<::>::!=$$ b:\n" +
-                      "min = a\n" +
-                      "else:\n" +
-                      "min = b\n  pass",
-                'programmingLang': "pseudo"
-            });
-            parson.init(initial);
-            parson.shuffleLines();
-            $("#newInstanceLink").click(function(event){
-                event.preventDefault();
+            $(document).ready(function () {
+                parson = new ParsonsWidget({
+                    'sortableId': 'sortable',
+                    'trashId': 'sortableTrash',
+                    'max_wrong_lines': 1,
+                    'vartests': [{ initcode: "min = None\na = 0\nb = 2", code: "", message: "Testing with a = 0 ja b = 2", variables: { min: 0 } },
+                    {
+                        initcode: "min = None\na = 7\nb = 4\n", code: "", message: "Testing with a = 7 ja b = 4",
+                        variables: { min: 4 }
+                    }],
+                    'grader': ParsonsWidget._graders.LanguageTranslationGrader,
+                    'executable_code': "if $$toggle$$ $$toggle::<::>::!=$$ b:\n" +
+                        "min = a\n" +
+                        "else:\n" +
+                        "min = b\n  pass",
+                    'programmingLang': "pseudo"
+                });
+                parson.init(initial);
                 parson.shuffleLines();
+                $("#newInstanceLink").click(function (event) {
+                    event.preventDefault();
+                    parson.shuffleLines();
+                });
+                $("#feedbackLink").click(function (event) {
+                    event.preventDefault();
+                    var fb = parson.getFeedback();
+                    $("#unittest").html("<h2>Feedback from testing your program:</h2>" + fb.feedback);
+                });
             });
-            $("#feedbackLink").click(function(event){
-                event.preventDefault();
-                var fb = parson.getFeedback();
-                $("#unittest").html("<h2>Feedback from testing your program:</h2>" + fb.feedback);
-            });
-        });
         </script>
+        <div id="footer">
+            <a href="./hello-parson-noindent.html" class="button left">Previous</a>
+            <a href="./pages/distinctElements.html" class="button right">Next</a>
+        </div>
     </body>
 </html>
