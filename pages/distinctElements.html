@@ -37,16 +37,16 @@
             <script src="../lib/skulpt.js"></script>
             <script src="../lib/skulpt-stdlib.js"></script>
             <script>
-                var initial = 
-                    "PRINT \'Enter integer values into the array, or -1 to stop:\'\n" +
-                    "WHILE INPUT $$toggle::<::>::!=::==::<=::>=$$ -1\n" +
-                    "Read from INPUT and STORE in INPUT array \n" +
-                  
-                    "FOR all elements in the INPUT array\n" +
-                    "Check if each element in INPUT array is in distinct element array\n" + 
-                    "IF element is not in distinct element array THEN add it to distinct element array\n" +
-                    "PRINT \'Distinct values in the array:\'\n" +
-                    "Print all elements in the distinct element array\n"
+                var initial =
+                    "cout\n" +
+                    "while loop\n" +
+                    "assignment\n" +
+
+                    "for loop\n" +
+                    "if statement\n" +
+                    "if statement\n" +
+                    "cout\n" +
+                    "cout\n";
 
                     
           var parson;
@@ -61,15 +61,15 @@
                         variables: {min: 4}}],
                   'grader': ParsonsWidget._graders.LanguageTranslationGrader,
                   'executable_code':
-                      "PRINT \'Enter integer values into the array, or -1 to stop:\'\n" +
-                      "WHILE INPUT $$toggle::<::>::!=::==::<=::>=$$ -1\n" +
-                      "Read from INPUT and STORE in INPUT array \n" +
+                      "cout\n" +
+                      "while loop\n" +
+                      "assignment\n" +
 
-                      "FOR all elements in the INPUT array\n" +
-                      "Check if each element in array is in distinct element array\n" +
-                      "IF element is not in distinct element array THEN add it to distinct element array\n" +
-                      "PRINT \'Distinct values in the array:\'\n" +
-                      "Print all elements in the distinct element array\n"
+                      "for loop\n" +
+                      "if statement\n" +
+                      "if statement\n" +
+                      "cout\n" +
+                      "cout\n"
 
               });
               parson.init(initial);
