@@ -41,14 +41,18 @@
             <script src="../lib/skulpt-stdlib.js"></script>
             <script>
                 var initial =
-                    "PRINT \'The program prints a table of exponential powers.\'\n" +
-                    "PRINT \'Enter the number of rows to print: \'\n" +
-                    "Read from INPUT and STORE in numRows\n" +
-                    "PRINT \'Enter the number of powers to print: \'\n" +
-                    "Read from INPUT and STORE in numPowers\n" +
-                    "FOR the value of numRows\n" +
-                    "FOR the value of numPowers\n" +
-                    "PRINT the base number 1 to numPowers power\n";
+                    "cout\n" +
+                    "cout\n" +
+                    "cin\n" +
+                    "cout\n" +
+                    "cin\n" +
+                    "cout\n" +
+                    "cin\n" +
+                    "for loop\n" +
+                    "for loop\n" +
+                    "for loop\n" +
+                    "for loop\n" +
+                    "cout\n";
                 var parson;
 
                 $(document).ready(function () {
@@ -63,15 +67,19 @@
                         }],
                         'grader': ParsonsWidget._graders.LanguageTranslationGrader,
                         'programmingLang': "pseudo",
-                        'executable_code': "inputValue = 0\n" +
-                            "PRINT \'The program prints a table of exponential powers.\'\n" +
-                            "PRINT \'Enter the number of rows to print: \'\n" +
-                            "Read from INPUT and STORE in numRows\n" +
-                            "PRINT \'Enter the number of powers to print: \'\n" +
-                            "Read from INPUT and STORE in numPowers\n" +
-                            "FOR the value of numRows\n" +
-                            "FOR the value of numPowers\n" +
-                            "PRINT the base number 1 to numPowers power\n"
+                        'executable_code': 
+                            "cout\n" +
+                            "cout\n" +
+                            "cin\n" +
+                            "cout\n" +
+                            "cin\n" +
+                            "cout\n" +
+                            "cin\n" +
+                            "for loop\n" +
+                            "for loop\n" +
+                            "for loop\n" +
+                            "for loop\n" +
+                            "cout\n"
                       
                     });
                     parson.init(initial);
