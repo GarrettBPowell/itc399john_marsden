@@ -31,7 +31,7 @@
             <script src="../parsons.js"></script>
             <script src="../lib/skulpt.js"></script>
             <script>
-                var initial = "while INPUT $$toggle::<::>::!=::==::<=::>=$$ -1\n";
+                var initial = "WHILE INPUT $$toggle::<::>::!=::==::<=::>=$$ -1\n";
                 var parson;
 
                 $(document).ready(function () {
@@ -46,7 +46,7 @@
                         }],
                         'grader': ParsonsWidget._graders.LanguageTranslationGrader,
                         'executable_code':
-                            "while INPUT $$toggle::<::>::!=::==::<=::>=$$ -1\n"
+                            "WHILE INPUT $$toggle::<::>::!=::==::<=::>=$$ -1\n"
                     });
                     parson.init(initial);
                     parson.shuffleLines();
