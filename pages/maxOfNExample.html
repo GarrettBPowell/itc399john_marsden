@@ -11,12 +11,14 @@
     <body>
       <div id="container">
         <div id="header">
-          <h2>Toggle</h2>
+          <h2>Max of N Example</h2>
         </div>
         <div id="body">
             <p>
-                You can toggle the red [??] boxes and change what they contain. Use the WHILE INPUT [??] -1 block to see
-                how you can toggle the content.
+                The goal of this exercise is to implement the "find largest number" algorithm using a for loop.
+
+                Create a program that will find the maximum number from N numbers. Prompt the user for the count of the numbers, 
+                which must be at least one. Your program should prompt for and read N real numbers, then report the largest of them.
             </p>
             <div id="sortableTrash" class="sortable-code"></div>
             <div id="sortable" class="sortable-code">
@@ -31,7 +33,19 @@
             <script src="../parsons.js"></script>
             <script src="../lib/skulpt.js"></script>
             <script>
-                var initial = "WHILE INPUT $$toggle::<::>::!=::==::<=::>=$$ -1\n";
+                var initial = 
+                    "cin\n" +
+                    "cin\n" +
+                    "cin\n" +
+                    "cout\n" +
+                    "cout\n" +
+                    "cout\n" +
+                    "for loop\n" +
+                    "for loop\n" +
+                    "while loop\n" +
+                    "while loop\n" +
+                    "if statement\n" +
+                    "if statement\n";
                 var parson;
 
                 $(document).ready(function () {
@@ -46,7 +60,18 @@
                         }],
                         'grader': ParsonsWidget._graders.LanguageTranslationGrader,
                         'executable_code':
-                            "WHILE INPUT $$toggle::<::>::!=::==::<=::>=$$ -1\n"
+                            "cin\n" +
+                            "cin\n" +
+                            "cin\n" +
+                            "cout\n" +
+                            "cout\n" +
+                            "cout\n" +
+                            "for loop\n" +
+                            "for loop\n" +
+                            "while loop\n" +
+                            "while loop\n" +
+                            "if statement\n" +
+                            "if statement\n"
                     });
                     parson.init(initial);
                     parson.shuffleLines();
