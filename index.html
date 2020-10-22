@@ -1,7 +1,7 @@
 ﻿<!doctype html>
 <html>
 <head>
-    <title>Distinct Elements</title>
+    <title>Table of Powers</title>
     <link href="./parsons.css" rel="stylesheet" />
     <link href="./lib/prettify.css" rel="stylesheet" />
     <link href="./default.css" rel="stylesheet" />
@@ -11,17 +11,20 @@
 <body>
     <div id="container">
         <div id="header">
-            <h2>Distinct Elements</h2>
+            <h2>Table of Powers</h2>
         </div>
         <div id="body">
 
             <hr>
             <h3>Instructions</h3>
             <p>
-                Read a series of numbers into an integer array, until -1 is entered. The input will have at least one number (not counting -1)
-                and may consist of up to 100 numbers. Print to the screen all distinct numbers in the array, sequentially.
-                In other words, every number that appears in the array will be printed to the screen exactly once, in order by its first appearance,
-                even if it appears multiple times in the array.
+                Write a program that prints out a table of exponential numbers.
+                This assignment is similar to the previous Table of Cubes assignment,
+                but has a varying number of columns per row (and so requires nested loops).
+                Prompt the user for the number of rows and the highest power.
+
+                Note that the first value in each row is right-aligned in two spaces and every other value is right-aligned in eight spaces.
+                You will need to find the setw() function useful to control the spacing.
             </p>
             <div id="sortableTrash" class="sortable-code"></div>
             <div id="sortable" class="sortable-code">
@@ -38,29 +41,29 @@
             <script src="./lib/skulpt-stdlib.js"></script>
             <script>
                 var initial =
-                    "while loop\n" +
-                    "while loop\n" +
-                    "while loop\n" +
-                    "while loop\n" +
-                    "for loop\n" +
-                    "for loop\n" +
-                    "for loop\n" +
-                    "for loop\n" +
-                    "if statement\n" +
-                    "if statement\n" +
-                    "if statement\n" +
-                    "if statement\n" + 
                     "cout\n" +
                     "cout\n" +
                     "cout\n" +
                     "cout\n" +
-                    "assignment\n" +
-                    "assignment\n" +
-                    "assignment\n" +
-                    "assignment\n" +
+                    "cout\n" +
                     "cin\n" +
+                    "cin\n" +            
                     "cin\n" +
-                    "cin\n" ;
+                    "if statement\n" +
+                    "if statement\n" +
+                    "if statement\n" +
+                    "for loop\n" +
+                    "for loop\n" +
+                    "for loop\n" +
+                    "for loop\n" +
+                    "while loop\n" +
+                    "while loop\n" +
+                    "while loop\n" +
+                    "assignment\n" +
+                    "assignment\n" +
+                    "assignment\n";
+                
+                
 
 
                 var parson;
@@ -76,7 +79,7 @@
                             variables: { min: 4 }
                         }],
                         'grader': ParsonsWidget._graders.LanguageTranslationGrader
-                       
+
 
                     });
                     parson.init(initial);
@@ -84,7 +87,7 @@
                 });
             </script>
         </div>
-        
+
     </div>
 </body>
 </html>

@@ -1,7 +1,7 @@
 ﻿<!doctype html>
 <html>
 <head>
-    <title>Table of Powers</title>
+    <title>Distinct Elements</title>
     <link href="../parsons.css" rel="stylesheet" />
     <link href="../lib/prettify.css" rel="stylesheet" />
     <link href="../default.css" rel="stylesheet" />
@@ -11,97 +11,80 @@
 <body>
     <div id="container">
         <div id="header">
-            <h2>Table of Powers</h2>
+            <h2>Distinct Elements</h2>
         </div>
         <div id="body">
 
             <hr>
             <h3>Instructions</h3>
             <p>
-                Write a program that prints out a table of exponential numbers.
-                This assignment is similar to the previous Table of Cubes assignment,
-                but has a varying number of columns per row (and so requires nested loops).
-                Prompt the user for the number of rows and the highest power.
-
-                Note that the first value in each row is right-aligned in two spaces and every other value is right-aligned in eight spaces.
-                You will need to find the setw() function useful to control the spacing.
+                Read a series of numbers into an integer array, until -1 is entered. The input will have at least one number (not counting -1)
+                and may consist of up to 100 numbers. Print to the screen all distinct numbers in the array, sequentially.
+                In other words, every number that appears in the array will be printed to the screen exactly once, in order by its first appearance,
+                even if it appears multiple times in the array.
             </p>
-            <div id="sortableTrash" class="sortable-code"></div>
-            <div id="sortable" class="sortable-code">
-            </div>
-            <div style="clear:both;"></div>
-            <div id="unittest"></div>
-            <script src="../lib/jquery.min.js"></script>
-            <script src="../lib/jquery-ui.min.js"></script>
-            <script src="../lib/jquery.ui.touch-punch.min.js"></script>
-            <script src="../lib/underscore-min.js"></script>
-            <script src="../lib/lis.js"></script>
-            <script src="../parsons.js"></script>
-            <script src="../lib/skulpt.js"></script>
-            <script src="../lib/skulpt-stdlib.js"></script>
-            <script>
-                var initial =
-                    "cout\n" +
-                    "cout\n" +
-                    "cin\n" +
-                    "cout\n" +
-                    "cin\n" +
-                    "cout\n" +
-                    "cin\n" +
-                    "for loop\n" +
-                    "for loop\n" +
-                    "for loop\n" +
-                    "for loop\n" +
-                    "while loop\n" +
-                    "while loop\n" +
-                    "while loop\n" +
-                    "assignment\n" +
-                    "assignment\n" +
-                    "assignment\n" +
-                    "cout\n";
-                var parson;
+            
+                    <div id="sortableTrash" class="sortable-code"></div>
+                    <div id="sortable" class="sortable-code">
+                    </div>
+                    <div style="clear:both;"></div>
+                    <div id="unittest"></div>
+                    <script src="../lib/jquery.min.js"></script>
+                    <script src="../lib/jquery-ui.min.js"></script>
+                    <script src="../lib/jquery.ui.touch-punch.min.js"></script>
+                    <script src="../lib/underscore-min.js"></script>
+                    <script src="../lib/lis.js"></script>
+                    <script src="../parsons.js"></script>
+                    <script src="../lib/skulpt.js"></script>
+                    <script src="../lib/skulpt-stdlib.js"></script>
+                    <script>
+                        var initial =
+                            "while loop\n" +
+                            "while loop\n" +
+                            "while loop\n" +
+                            "while loop\n" +
+                            "for loop\n" +
+                            "for loop\n" +
+                            "for loop\n" +
+                            "for loop\n" +
+                            "if statement\n" +
+                            "if statement\n" +
+                            "if statement\n" +
+                            "if statement\n" +
+                            "cout\n" +
+                            "cout\n" +
+                            "cout\n" +
+                            "cout\n" +
+                            "assignment\n" +
+                            "assignment\n" +
+                            "assignment\n" +
+                            "assignment\n" +
+                            "cin\n" +
+                            "cin\n" +
+                            "cin\n";
+                        var parson;
 
-                $(document).ready(function () {
-                    parson = new ParsonsWidget({
-                        'sortableId': 'sortable',
-                        'trashId': 'sortableTrash',
-                        'max_wrong_lines': 1,
-                        'vartests': [{ initcode: "min = None\na = 0\nb = 2", code: "", message: "Testing with a = 0 ja b = 2", variables: { min: 0 } },
-                        {
-                            initcode: "min = None\na = 7\nb = 4\n", code: "", message: "Testing with a = 7 ja b = 4",
-                           variables: { min: 4 }
-                        }],
-                        'grader': ParsonsWidget._graders.LanguageTranslationGrader,
-                        'programmingLang': "pseudo",
-                        'executable_code': 
-                            "cout\n" +
-                            "cout\n" +
-                            "cin\n" +
-                            "cout\n" +
-                            "cin\n" +
-                            "cout\n" +
-                            "cin\n" +
-                            "for loop\n" +
-                            "for loop\n" +
-                            "for loop\n" +
-                            "for loop\n" +
-                            "while loop\n" +
-                            "while loop\n" +
-                            "while loop\n" +
-                            "assignment\n" +
-                            "assignment\n" +
-                            "assignment\n" +
-                            "cout\n"
-                      
-                    });
-                    parson.init(initial);
-                    parson.shuffleLines();
-                });
-            </script>
-        </div>
-        <div id="footer">
-            <a href="./distinctElements.html" class="button left">Previous</a>
-        </div>
-    </div>
+                        $(document).ready(function () {
+                            parson = new ParsonsWidget({
+                                'sortableId': 'sortable',
+                                'trashId': 'sortableTrash',
+                                'max_wrong_lines': 1,
+                                'vartests': [{ initcode: "min = None\na = 0\nb = 2", code: "", message: "Testing with a = 0 ja b = 2", variables: { min: 0 } },
+                                {
+                                    initcode: "min = None\na = 7\nb = 4\n", code: "", message: "Testing with a = 7 ja b = 4",
+                                    variables: { min: 4 }
+                                }],
+                                'grader': ParsonsWidget._graders.LanguageTranslationGrader
+
+                            });
+                            parson.init(initial);
+                            parson.shuffleLines();
+                        });
+                    </script>
+                </div>
+                <div id="footer">
+                    <a href="./distinctElements.html" class="button left">Previous</a>
+                </div>
+            </div>
 </body>
 </html>
